@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SISTEM PENERIMAAN SISWA BARU</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body{
+    background:#f1f3f6;
+    line-height:1.6;
+}
+
+/* ================= NAVBAR ================= */
+nav{
+    background:#0b1c2d;
+    padding:14px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#fff;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.menu{
+    display:flex;
+    gap:10px;
+}
+
+.menu a{
+    text-decoration:none;
+    background:#fff;
+    color:#0b1c2d;
+    padding:8px 18px;
+    border-radius:25px;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    background:#ffc107;
+    color:#000;
+}
+
+/* HAMBURGER */
+.hamburger{
+    display:none;
+    font-size:26px;
+    color:#fff;
+    cursor:pointer;
+}
+
+/* ================= HEADER ================= */
+header{
+    text-align:center;
+    padding:35px 15px;
+    background:linear-gradient(135deg,#0d6efd,#20c997);
+    color:#fff;
+}
+
+header h1{
+    font-size:22px;
+}
+
+/* ================= SECTION ================= */
+section{
+    padding:55px 8%;
+}
+
+.light{
+    background:#fff;
+}
+
+.dark{
+    background:#0b1c2d;
+    color:#fff;
+}
+
+/* ================= BERANDA ================= */
+.beranda-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    align-items:center;
+}
+
+.beranda-grid img{
+    width:100%;
+    border-radius:15px;
+}
+
+/* ================= BUTTON ================= */
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#ffc107;
+    color:#000;
+    padding:12px 32px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#20c997;
+    color:#fff;
+}
+
+/* ================= EKSKUL ================= */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.card{
+    background:#f8f9fa;
+    color:#000;
+    padding:15px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    border-radius:12px;
+}
+
+.card h3{
+    margin:10px 0;
+}
+
+/* ================= LIST ================= */
+ul{
+    margin-top:20px;
+    padding-left:20px;
+}
+
+ul li{
+    margin-bottom:10px;
+}
+
+/* ================= FLEX ================= */
+.flex{
+    display:flex;
+    gap:30px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.flex img{
+    width:320px;
+    max-width:100%;
+    border-radius:15px;
+}
+
+/* ================= FOOTER ================= */
+footer{
+    background:#000;
+    color:#fff;
+    text-align:center;
+    padding:15px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+    .hamburger{
+        display:block;
+    }
+    .menu{
+        display:none;
+        flex-direction:column;
+        width:100%;
+        margin-top:15px;
+    }
+    .menu.active{
+        display:flex;
+    }
+    .beranda-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+    header h1{
+        font-size:18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">SMPN 2 SP</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="menu" id="menu">
+        <a href="#beranda">Beranda</a>
+        <a href="#ekskul">Ekstrakurikuler</a>
+        <a href="#prestasi">Prestasi</a>
+        <a href="#syarat">Persyaratan</a>
+        <a href="#daftar"><b>Daftar Sekarang</b></a>
+    </div>
+</nav>
+
+<!-- JUDUL -->
+<header>
+    <h1>SISTEM PENERIMAAN SISWA BARU<br>SMP NEGERI 2 SUNGAI PANDAN</h1>
+</header>
+
+<!-- BERANDA -->
+<section id="beranda" class="light">
+    <div class="beranda-grid">
+        <div>
+            <h2>Mari Bergabung Bersama Kami</h2>
+            <p>
+                SMP Negeri 2 Sungai Pandan siap membentuk siswa yang
+                berprestasi, berkarakter, dan berakhlak mulia melalui
+                pendidikan berkualitas.
+            </p>
+            <a href="#daftar" class="btn"><i>DAFTAR SEKARANG</i></a>
+        </div>
+        <center><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSOVylozvvlQ-a5hNfLqqPK5o6EUC_j3CCMu03c3Otig70hRQdiiCdoGFyJtPxJos96vxK1PGM5YuEo2WpTeu0wgIXSQhNaabmoPCqcPoGOPmQ_1J1LNDRP6ydNYpmux8qF2uE18t93i8OI970uWeEjfLeaihO-v6x32nXH99RZR5iA9cPHhJBxHqNYZ7T/s1600/WhatsApp%20Image%202026-02-07%20at%2008.53.34.jpeg" style="width: 140px;" alt="Foto Sekolah"></center>
+    </div>
+</section>
+
+<!-- EKSTRAKURIKULER -->
+<section id="ekskul" class="dark">
+    <h2>Ekstrakurikuler</h2>
+    <div class="grid">
+        <div class="card"><img src="https://via.placeholder.com/200"><h3>Sepak Bola</h3><p>Fisik & kerja sama tim.</p></div>
+        <div class="card"><img src="https://via.placeholder.com/200"><h3>Rebana</h3><p>Seni musik islami.</p></div>
+        <div class="card"><img src="https://via.placeholder.com/200"><h3>Band</h3><p>Bakat musik modern.</p></div>
+        <div class="card"><img src="https://via.placeholder.com/200"><h3>Catur</h3><p>Strategi & konsentrasi.</p></div>
+        <div class="card"><img src="https://via.placeholder.com/200"><h3>Gulat</h3><p>Kekuatan & disiplin.</p></div>
+        <div class="card"><img src="https://via.placeholder.com/200"><h3>Paskibraka</h3><p>Nasionalisme.</p></div>
+        <div class="card"><img src="https://via.placeholder.com/200"><h3>Tari</h3><p>Seni budaya.</p></div>
+        <div class="card"><img src="https://via.placeholder.com/200"><h3>Basket</h3><p>Sportivitas.</p></div>
+        <div class="card"><img src="https://via.placeholder.com/200"><h3>Catur</h3><p>Logika & fokus.</p></div>
+        <div class="card"><img src="https://via.placeholder.com/200"><h3>Tahfidz</h3><p>Menghafal Al-Qur'an.</p></div>
+        <div class="card"><img src="https://via.placeholder.com/200"><h3>Bengkel</h3><p>Keterampilan teknik.</p></div>
+    </div>
+</section>
+
+<!-- PRESTASI -->
+<section id="prestasi" class="light">
+    <h2>Prestasi yang Pernah Diraih Selama Dua Tahun Terakhir</h2>
+    <img src=https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhmyattvd8ayTUulfFInVcVMZe-6OptFwc83BkuM1xk8C_hAuXFNY6S0fN4vCW7eIvqMHwK6kGaS3cMAXXkFtpEFuoAbyc9QJzTqB3DbseDeuZp-0d6pOjUdyBAGIY9uEoTX8WPBESiwAmb3Z-TGkV4wulsNKxrZnmE_6X86MK-UrbeJoCj-pTsfnRdSbcO/s320/2.png" style="margin-top:20px;border-radius:15px;">
+    <ul>
+        <li>Juara 1 Sepak Bola Tingkat Kabupaten</li>
+        <li>Juara 2 Paskibraka Tingkat Kecamatan</li>
+        <li>Juara 3 Lomba Catur Pelajar</li>
+        <li>Juara Harapan Tari Tradisional</li>
+    </ul>
+</section>
+
+<!-- PERSYARATAN -->
+<section id="syarat" class="dark">
+    <div class="flex">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHd87FBqzIGkTi0UudTh5aAjfGyMiWjDcZ9kf1ifmsO7RX5lxsgVAb1YSjlC33viSTP_EooMnmnzpnfkUzXs8TNwDtXlbaCNFYKdBrH3FdyF_COZkwESCrGQNp2NFer6U0KsSyeJuOPk1gNLd-f4GBYYKocretTsdED-VUbiPPWmh4zpwjA7YG90a_qSdq/s320/11.png">
+        <div>
+            <h2>Persyaratan Pendaftaran</h2>
+            <ul>
+                <li>Fotokopi Akta Kelahiran</li>
+                <li>Fotokopi Kartu Keluarga</li>
+                <li>Ijazah / Surat Keterangan Lulus</li>
+                <li>Pas Foto 3x4</li>
+                <li>Mengisi Formulir Pendaftaran</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- DAFTAR -->
+<section id="daftar" class="light" style="text-align:center;">
+    <h2>Ayo Segera Bergabung!</h2>
+    <p>Jadilah bagian dari keluarga besar SMP Negeri 2 Sungai Pandan.</p>
+    <a href="#" class="btn"><i>DAFTAR SEKARANG</i></a><br>
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjafxHPUjFmWe5CQfzFbEWBG7W10RwTmKOUlcyPhXJSO5zq8ktDwQRGQvw50otzDkW40C-A5e9K5yrW8Cv2ja1j935IAwNml1aAFuCCeGhQLAc0LZ3VzrEF0CpoYv4VDHe3y79Bbe5nnEPi-aIV-fRMDAvIc3XLVFuDhiglMgRpovV2882DKkRd_jz5JcDq/s320/31.png" style="border-radius:15px;">
+</section>
+
+<footer>
+    © 2026 SMP Negeri 2 Sungai Pandan
+</footer>
+
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
